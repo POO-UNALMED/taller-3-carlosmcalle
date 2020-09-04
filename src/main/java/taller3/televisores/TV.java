@@ -8,6 +8,7 @@ package taller3.televisores;
 /**
  *
  * @author Carlos M Calle
+ * 
  */
 public class TV {
 
@@ -17,7 +18,7 @@ public class TV {
     public boolean estado;
     public int volumen;
     public Control control;
-    public static int numTV = 0;
+    public static int numTV;
 
     public TV(Marca marca, boolean estado) {
         this.marca = marca;
@@ -28,6 +29,10 @@ public class TV {
         numTV++;
     }
 
+    public static void setNumTV(int numtv){
+        numTV = numtv;
+    }   
+    
     public void estadoInicial() {
         this.canal = 1;
         this.volumen = 1;
@@ -117,4 +122,6 @@ public class TV {
             this.canal -= 1;
         }
     }
+    
+    
 }
